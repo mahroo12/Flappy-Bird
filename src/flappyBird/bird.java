@@ -116,6 +116,7 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 //		g.setColor(Color.white);
 //		g.setFont(new Font("serif", Font.BOLD, 25));
 //		g.drawString(""+score, 590, 30);
+		
 		if (birdposx> 310 && birdposx < 380)
 		{
 			g.setColor(Color.red);
@@ -189,7 +190,7 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 			
 				birdposy += 1;
 				birdposx +=1;
-			//used to intersect with the slider
+			//used to check for intersection with the top columns
 			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(310, 0, 50, 200)))
 			{
 				play = false;
@@ -220,6 +221,40 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 			{
 				play = false;
 			}
+			
+			
+			//used to check intersection with bottom columns
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(310, 410-15, 50, 110)))
+			{
+				play = false;
+			}
+
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(380, 350, 50, 150)))
+			{
+				play = false;
+			}
+			
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(450, 325, 50, 180)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(520, 325, 50, 180)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(590, 315, 40, 190)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(660, 350, 40, 155)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(730, 360, 50, 140)))
+			{
+				play = false;
+			}
+			
 		}
 
 		repaint();// whatever is inside the paint gets repainted once but with the timer.start() gets printed infinitely 
