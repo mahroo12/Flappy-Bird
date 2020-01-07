@@ -1,6 +1,7 @@
 package flappyBird;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -15,6 +16,7 @@ import javax.swing.Timer;
 public class bird extends JPanel implements KeyListener, ActionListener{
 
 	private boolean play = false;
+	private int score = 0;
 	private int slider1 = 200;
 	private Timer timer; // timer class for how fast the ball should move
 	private int delay = 30; // speed of the bird
@@ -98,6 +100,68 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 //			h= h +10;
 //
 //		}
+		
+		//scores
+//		g.setColor(Color.white);
+//		g.setFont(new Font("serif", Font.BOLD, 25));
+//		g.drawString(""+score, 590, 30);
+		if (birdposx> 310 && birdposx < 380)
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("10", 590, 30);
+			
+		}
+		else if (birdposx>= 380 && birdposx < 450) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("20", 590, 30);
+		}
+		
+		else if (birdposx>= 450 && birdposx < 520) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("30", 590, 30);
+		}
+		
+		else if (birdposx>= 520 && birdposx < 590) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("40", 590, 30);
+		}
+		
+		else if (birdposx>= 590 && birdposx < 660) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("50", 590, 30);
+		}
+
+		else if (birdposx>= 660 && birdposx < 730) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("60", 590, 30);
+		}
+		else if (birdposx>= 730 && birdposx < 780) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("70", 590, 30);
+		}
+
+		else if (birdposx>=780) 
+		{
+			g.setColor(Color.red);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("You win", 590, 30);
+		}
+
+
+
 
 		g.dispose();
 		
