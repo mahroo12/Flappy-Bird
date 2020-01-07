@@ -68,10 +68,10 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 		g.fillOval(birdposx, birdposy, 20, 20);
 		
 		
-		//the columns
+		//the top columns
 		g.setColor(Color.green.darker());
 
-//		
+	
 		g.fillRect(310, 0, 50, 200);
 		g.fillRect(380, 0, 50, 300);
 		g.fillRect(450, 0, 50, 250);
@@ -79,7 +79,18 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 		g.fillRect(590, 0, 50, 260);
 		g.fillRect(660, 0, 50, 300);
 		g.fillRect(730, 0, 50, 320);
-//		g.fillRect(200+50+10, 410-25, 50, 100+15);
+		
+		
+		// bottom columns
+		g.fillRect(310, 410-15, 50, 110);
+		g.fillRect(380, 350, 50, 150);
+		g.fillRect(450, 325, 50, 180);
+		g.fillRect(520, 325, 50, 180);
+		g.fillRect(520, 315, 50, 180);
+		g.fillRect(590, 315, 40, 190);
+		g.fillRect(660, 350, 40, 155);
+		g.fillRect(730, 360, 50, 140);
+
 
 		//Random rand = new Random();
 //		int j = 100;
