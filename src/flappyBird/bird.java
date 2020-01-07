@@ -17,7 +17,7 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 	private boolean play = false;
 	private int slider1 = 200;
 	private Timer timer; // timer class for how fast the ball should move
-	private int delay = 15; // speed of the bird
+	private int delay = 30; // speed of the bird
 	private int birdposx = 120; // x position of the ball
 	private int birdposy = 350; // y position of the ball
 
@@ -68,31 +68,31 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 		
 		//the columns
 		g.setColor(Color.green.darker());
-//		g.fillRect(200, 0, 50, 100);
-//		g.fillRect(200, 410, 50, 90);
+
 //		
-//		g.fillRect(200+50+10, 0, 50, 200);
+		g.fillRect(310, 0, 50, 200);
 //		g.fillRect(200+50+10, 410-25, 50, 100+15);
 
 		//Random rand = new Random();
-		int j = 100;
-		for(int i = 200; i <800; i= i+70)
-		{
-			//int j = 100;
-			g.fillRect(i, 0, 50, j);
-			j= j +10;
-
-		}
+//		int j = 100;
+//		for(int i = 200; i <800; i= i+70)
+//		{
+//			//int j = 100;
+//			g.fillRect(i, 0, 50, j);
+//			j= j +10;
+//
+//		}
 		
-		int h = 15;
-		for(int i = 200; i <800; i= i+70)
-		{
-			//int j = 100;
-			g.fillRect(i, 410-h, 50, 100+h);
-			h= h +10;
-
-		}
 		
+//		int h = 15;
+//		for(int i = 200; i <800; i= i+70)
+//		{
+//			//int j = 100;
+//			g.fillRect(i, 410-h, 50, 100+h);
+//			h= h +10;
+//
+//		}
+
 		g.dispose();
 		
 	}
@@ -100,25 +100,22 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		timer.start();
-//		ticks++;
-//		if (ticks%2 == 0 && ymotion<15)
-//		{
-//			ymotion +=2;
-//		}
+
 		
 		
 		if(play)
 		{
 			
-			
+				birdposy += 1;
+				birdposx +=1;
 			//used to intersect with the slider
-			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(slider1, 550, 100, 8)))
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(310, 0, 50, 200)))
 			{
-				System.out.println("Game Over!");
+				play = false;
 			}
+
 		}
-	birdposy += 1;
-	birdposx +=1;
+
 		repaint();// whatever is inside the paint gets repainted once but with the timer.start() gets printed infinitely 
 		
 	}
