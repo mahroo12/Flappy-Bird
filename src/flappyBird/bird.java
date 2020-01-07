@@ -71,6 +71,12 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 
 //		
 		g.fillRect(310, 0, 50, 200);
+		g.fillRect(380, 0, 50, 300);
+		g.fillRect(450, 0, 50, 250);
+		g.fillRect(520, 0, 50, 200);
+		g.fillRect(590, 0, 50, 260);
+		g.fillRect(660, 0, 50, 300);
+		g.fillRect(730, 0, 50, 320);
 //		g.fillRect(200+50+10, 410-25, 50, 100+15);
 
 		//Random rand = new Random();
@@ -114,6 +120,31 @@ public class bird extends JPanel implements KeyListener, ActionListener{
 				play = false;
 			}
 
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(380, 0, 50, 300)))
+			{
+				play = false;
+			}
+			
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(310, 0, 50, 200)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(450, 0, 50, 250)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(520, 0, 50, 200)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(660, 0, 50, 300)))
+			{
+				play = false;
+			}
+			if(new Rectangle(birdposx, birdposy, 20, 20).intersects(new Rectangle(730, 0, 50, 320)))
+			{
+				play = false;
+			}
 		}
 
 		repaint();// whatever is inside the paint gets repainted once but with the timer.start() gets printed infinitely 
